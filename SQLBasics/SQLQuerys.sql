@@ -76,3 +76,18 @@ SELECT title FROM books WHERE title LIKE "Harry Potter";
 SELECT title FROM books WHERE title LIKE "Harry Potter%"; 
 -- 7 results
 
+--============================================
+-- the NULL Keyword
+--============================================
+
+--- What are the loans that are due back after December 18th 2015?
+
+SELECT * FROM loans WHERE return_by > "2015-12-18" AND returned_on IS NULL;
+
+--- What are the loans that have been returned already?
+
+SELECT * FROM loans WHERE return_by > "2015-12-18" AND returned_on IS NOT NULL;
+
+-- Who is user 4?
+
+SELECT first_name, email FROM patrons WHERE id = 4;
