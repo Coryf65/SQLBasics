@@ -4,9 +4,9 @@
 
 CREATE TABLE [dbo].[books] (
     [Id]              INT  NOT NULL,
-    [title]           TEXT NULL,
-    [author]          TEXT NULL,
-    [genre]           TEXT NULL,
+    [title]           VARCHAR(50) NULL,
+    [author]          VARCHAR(50) NULL,
+    [genre]           VARCHAR(50) NULL,
     [first_published] INT  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
@@ -55,11 +55,11 @@ SET IDENTITY_INSERT [dbo].[loans] OFF
 
 CREATE TABLE [dbo].[patrons] (
     [Id]         INT  IDENTITY (1, 1) NOT NULL,
-    [first_name] TEXT NULL,
-    [last_name]  TEXT NULL,
-    [address]    TEXT NULL,
-    [email]      TEXT NULL,
-    [library_id] TEXT NULL,
+    [first_name] VARCHAR(50) NULL,
+    [last_name]  VARCHAR(50) NULL,
+    [address]    VARCHAR(50) NULL,
+    [email]      VARCHAR(50) NULL,
+    [library_id] VARCHAR(50) NULL,
     [zip_code]   INT  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
