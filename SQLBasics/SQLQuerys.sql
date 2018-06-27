@@ -26,8 +26,9 @@ SELECT title FROM books WHERE author = 'Ernest Cline' OR author = 'Andy Weir'
 	
 	SELECT first_name, email FROM patrons WHERE id = 1 OR id = 3
 
--- NOTES:
+--============================================
 -- We can replace a search of OR's with an IN Keyword
+--============================================
 
 -- SELECT <columns> FROM <table> WHERE <condition 1> OR <condition 2> OR <condition 3>;
 	
@@ -41,8 +42,9 @@ SELECT title FROM books WHERE author = 'Ernest Cline' OR author = 'Andy Weir'
 	
 	SELECT first_name, email FROM patrons WHERE library_id NOT IN ("MCL1001", "MCL1100", "MCL1011")
 
--- NOTE:
--- Selecting a Range og values ...
+--============================================
+-- Selecting a Range of values ...
+--============================================
 
 --- What are the book in the library from the 19th century?
 	
@@ -58,3 +60,19 @@ SELECT title FROM books WHERE author = 'Ernest Cline' OR author = 'Andy Weir'
 	--SELECT <columns> FROM <table> WHERE <column> BETWEEN <lesser value> AND <greater value>
 
 	SELECT * FROM loans WHERE loaned_on BETWEEN "2015-12-13" AND "2015-12-19";
+
+--============================================
+-- using the LIKE Keyword
+--============================================
+
+-- What are all Harry Potter books in the library?
+
+SELECT title FROM books WHERE title = "Harry Potter";
+-- 0 results
+
+SELECT title FROM books WHERE title LIKE "Harry Potter"; 
+-- 0 results
+
+SELECT title FROM books WHERE title LIKE "Harry Potter%"; 
+-- 7 results
+
