@@ -1,4 +1,6 @@
-﻿-- Questions --
+﻿-- https://github.com/treehouse/cheatsheets/blob/master/sql_basics/cheatsheet.md
+
+-- Questions --
 
 -- Both condition 1 AND condition 2 Must match
 
@@ -91,3 +93,7 @@ SELECT * FROM loans WHERE return_by > "2015-12-18" AND returned_on IS NOT NULL;
 -- Who is user 4?
 
 SELECT first_name, email FROM patrons WHERE id = 4;
+
+-- find some matching values between two table
+
+	SELECT * FROM loans, books WHERE loans.book_id = books.Id
