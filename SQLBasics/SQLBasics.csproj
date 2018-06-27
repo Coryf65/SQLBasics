@@ -64,13 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="dbSetUp.sql" />
-    <Content Include="PracticeDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="PracticeDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>PracticeDatabase.mdf</DependentUpon>
-    </Content>
     <Content Include="SQLQuerys.sql" />
   </ItemGroup>
   <ItemGroup>
