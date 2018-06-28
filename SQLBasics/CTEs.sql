@@ -115,6 +115,18 @@ WITH
      FROM all_sales
      GROUP BY EmployeeID
   ),
+  
+  --EmployeeID	order_count
+--      1	          3
+--      2	          4
+--      3	          5
+--      4	          10
+--      5	          1
+--      6	          3
+--      7	          4
+--      8	          5
+--      9	          5
+  
 --Getting a a count of the sales for each employee
   sales_by_employee AS (
      SELECT EmployeeId, COUNT(*) AS sales_count
