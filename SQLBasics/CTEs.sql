@@ -1,3 +1,5 @@
+-- https://teamtreehouse.com/library/common-table-expressions-using-with
+
 --===============================================================
 --Basic Common Table Expression
 --===============================================================
@@ -116,7 +118,7 @@ FROM revenue_by_employee
 JOIN sales_by_employee ON revenue_by_employee.EmployeeId = sales_by_employee.EmployeeId
 JOIN Employees ON revenue_by_employee.EmployeeId = Employees.Id
 ORDER BY total_revenue DESC
-Have questions about this video? Start a discussion with the community and Treehouse staff.
+
 
 
 
