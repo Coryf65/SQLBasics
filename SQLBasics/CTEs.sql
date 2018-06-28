@@ -145,6 +145,15 @@ JOIN sales_by_employee ON revenue_by_employee.EmployeeId = sales_by_employee.Emp
 JOIN Employees ON revenue_by_employee.EmployeeId = Employees.Id
 ORDER BY total_revenue DESC
 
-
+--	Id	LastName	total_order_count	late_order_count
+--	1	Davolio			123						3
+--	2	Fuller			96						4
+--	3	Leverling		127						5
+--	4	Peacock			156						10
+--	5	Buchanan		42						1
+--	6	Suyama			67						3
+--	7	King			72						4
+--	8	Callahan		104						5
+--	9	Dodsworth		43						5
 
 
