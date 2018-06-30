@@ -53,3 +53,11 @@ Resolving Many to Many relationships during the database design process is one o
 
 > The infamous Xref (called at work) //(xref.png)
 
+1 > 1
+A “One to one” relationship between two tables means that a row in one table can only relate to one row in the table on the other side of their relationship and vice versa. This is the least common database relationship.
+
+===== Modeling Table Relationships =====
+
+The models that database designers create are called Entity Relationship Diagrams, because they are intended to model the way tables will eventually relate to each other in the finished database.
+
+> normally use Crow's Feet, as the design for a DB
