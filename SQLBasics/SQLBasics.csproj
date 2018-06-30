@@ -74,6 +74,7 @@
       <DependentUpon>DemoDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="SQLQuerys.sql" />
+    <Content Include="_images\xref.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

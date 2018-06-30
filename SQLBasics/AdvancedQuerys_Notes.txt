@@ -50,3 +50,6 @@ One to Many relationships are by far the most common type of table relationship.
 
 * > *
 Resolving Many to Many relationships during the database design process is one of the common steps performed by data architects.
+
+> The infamous Xref (called at work) //(xref.png)
+
