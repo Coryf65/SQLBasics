@@ -63,6 +63,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdvancedQuerys.sql" />
+    <Content Include="AdvancedQuerys_Notes.txt" />
     <Content Include="dbSetUp.sql" />
     <Content Include="DemoDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

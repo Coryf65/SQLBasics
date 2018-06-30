@@ -1,0 +1,46 @@
+﻿Learn the process of database normalization, which is the process of eliminating redundant or repeating data in a database.
+
+> Breaking up the data into goups and giving relationships to one another, and The overall process of creating a Relational Database!
+
+
+  Links
+//https://en.wikipedia.org/wiki/Database_normalization
+//https://www.studytonight.com/dbms/database-normalization.php
+//https://www.essentialsql.com/get-ready-to-learn-sql-database-normalization-explained-in-simple-english/
+
+Normalization eliminates the potential for update anomalies and the enforcement of data integrity. But what does that mean?
+
+> Think of ways to prevent a change in one spot to affect many others. insted of repeating a title repeatedly have a seperate table listing that name an change in one place. Keep it DRY !
+
+//http://www.quepublishing.com/articles/article.aspx?p=27785&seqNum=3
+//http://www.amazon.com/Beginning-Database-Design-Solutions-Stephens/dp/0470385499
+
+
+Now that we understand a little bit about what Relational Databases are and why we structure them the way we do, let’s take a higher-level look at how to think about data.
+
+> thinking of our data in real world ways. like a group of shirts, or a group of fruit.
+
+// Set Theory was founded in 1874, and is a relatively new mathematical discipline, as compared to Algebra or Calculus.
+
+
+===== Keys/Constraints ======
+
+
+There are 3 types of Database Keys we will be reviewing in this course:
+
+Unique Keys
+
+> normally an ID, they can be NULL, they can have multiple per table, can be changed to new values
+
+// Most of what you will find about Primary Keys will pertain to most or all database platforms, but there may be some minor differences in how they are implemented and how they behave on disk.
+
+Primary Keys
+
+> Unigue values, NEVER be NULL, One Priumary Key per table, Cannot be modified
+
+Foreign Keys
+
+> Foreign Keys are a column, or columns, that relate records back to the primary key in another table.
+
+
+===== Relationships ======
