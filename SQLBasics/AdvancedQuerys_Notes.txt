@@ -73,3 +73,20 @@ A join is the instruction to the query engine on how to relate records in one ta
 ===== Inner Joins =====
 
 > Inner Joins are the most common type of Joins. Inner joins match records together where values are equal on both sides of the join statement.
+
+
+===== Outer Joins =====
+
+Three Types of Outer Joins:
+
+Left
+Right
+Full
+
+In this video, we introduced three types of Outer Joins, but only showed examples of the Left Outer Join. This is because a few database engines, 
+like SQLite, only support the Left Outer Join. Most other database systems support all three types.
+
+Right Outer Joins are essentially the same thing as Left Outer Joins, but just specified in the opposite direction.
+
+Full Outer Joins are functionally different in that you are guaranteed to get all rows from both tables. Full Outer Joins aren’t used as much in application 
+or report coding as Inner and Left/Right Outer Joins, but can come in very handy when doing things like comparing data between two tables that are structurally similar.
