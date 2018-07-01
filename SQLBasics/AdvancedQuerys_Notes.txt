@@ -61,3 +61,15 @@ A “One to one” relationship between two tables means that a row in one table
 The models that database designers create are called Entity Relationship Diagrams, because they are intended to model the way tables will eventually relate to each other in the finished database.
 
 > normally use Crow's Feet, as the design for a DB
+
+
+===== Join Queries =====
+
+A join is the instruction to the query engine on how to relate records in one table to records in another.
+
+> two of the most common Joins are INNER and OUTER
+
+
+===== Inner Joins =====
+
+> Inner Joins are the most common type of Joins. Inner joins match records together where values are equal on both sides of the join statement.
