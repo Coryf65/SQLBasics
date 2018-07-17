@@ -174,3 +174,31 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 		SELECT * FROM Sale AS s
 		INNER JOIN (SELECT CarID, ModelYear FROM Car WHERE ModelYear = '2015') AS temp
 		ON s.CarID = temp.CarID;
+
+
+-- More Complex use of the Derived Table
+
+-- SELECT <columns> FROM <table 1> WHERE <column 1> <INNER|OUTER> JOIN 
+--      (SELECT <column 1>	FROM <table 2>	WHERE <search_criteria>) AS <temporary name> ON <equality criteria>;
+
+-- What is the sum of all sales by rep and location?
+
+SELECT sr.LastName, l.LocationName, SUM(s.SaleAmount) AS SaleAmount 
+  FROM Sale AS s 
+  INNER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID 
+  INNER JOIN Location AS l ON s.LocationID = l.LocationID 
+  GROUP BY sr.LastName, l.LocationName;	
+
+-- Sum of Sales by Rep and Location
+
+  SELECT sr.LastName, Loc1.StLouisAmount, Loc2.ColumbiaAmount FROM SalesRep AS sr
+  LEFT OUTER JOIN (
+	SELECT SalesRepID, SUM(SaleAmount) AS 'StLouisAmount'
+	FROM Sale AS s WHERE s.LocationID = 1
+	GROUP BY SalesRepID
+  ) AS Loc1 ON sr.SalesRepID = Loc1.SalesRepID
+  LEFT OUTER JOIN (
+	SELECT SalesRepID, SUM(SaleAmount) AS 'ColumbiaAmount'
+	FROM Sale AS s WHERE s.LocationID = 2
+	GROUP BY SalesRepID
+  ) AS Loc2 ON sr.SalesRepID = Loc2.SalesRepID;
