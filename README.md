@@ -28,7 +28,7 @@ understanding good query practices.
 
 -Set Operations
 
-<h3>Database Normalization</h3>
+<h2>Database Normalization</h2>
 
 In this stage, we will explore what a relational database is, why we structure databases in this way, and talk a little bit about the benefits relational databases.
 Why We Make Databases "Relational"
@@ -46,7 +46,7 @@ Why We Make Databases "Relational"
 -Set Theory Review
 
 
-<h3>Database Keys</h3>
+<h2>Database Keys</h2>
 In this stage, we introduce the concept of "Keys." Without Keys, databases as we know them would not be able to function.
 
 -Unique Keys
@@ -60,7 +60,7 @@ In this stage, we introduce the concept of "Keys." Without Keys, databases as we
 -Foreign Keys Review
 
 
-<h3>Table Relationships</h3>
+<h2>Table Relationships</h2>
 Relationships in databases help us to describe the way that one tables links or relates to another.
 
 -One to Many Relationships
@@ -74,7 +74,7 @@ Relationships in databases help us to describe the way that one tables links or 
 -Table Relationships Review
 
 
-<h3>Joining Table Data with SQL</h3>
+<h2>Joining Table Data with SQL</h2>
 We will be transitioning from mostly theoretical concepts to hands-on application of the concepts we’ve covered in the previous three stages. We will see how to use table relationships to produce query results that combine data from multiple tables.
 
 -Join Queries
@@ -89,7 +89,7 @@ We will be transitioning from mostly theoretical concepts to hands-on applicatio
 
 -JOIN Queries (Quiz)
 
-<h3>Subqueries</h3>
+<h2>Subqueries</h2>
 are one of the most advanced concepts to learn in SQL query writing. Seeing lots of examples and getting lots of practice will help solidify the concept.
 
 -What are Set Operations?
@@ -109,11 +109,11 @@ are one of the most advanced concepts to learn in SQL query writing. Seeing lots
 
 -Set Operations(Quiz)
 
-<h4>Advanced Subqueries</h4>
+<h3>Advanced Subqueries</h3>
 
 As you begin using subqueries, be advised that a poorly structured subquery written against a large table or tables can impact overall query performance. Be careful if you are writing subqueries against data sets that consume tables with row counts in the million-plus row range.
 
-<h4>Correlated Subqueries</h4>
+<h3>Correlated Subqueries</h3>
 This course does not cover the concept called Correlated Subqueries, which are slightly different in how they tie in with the outer query. Most of the time a regular subquery will do what you need, but correlated subqueries can be handy, too. These are especially heavy weight on the database engine, as they run the subquery many times; once per row in the outer query.
 
 Information on all subquery types including correlated subqueries
