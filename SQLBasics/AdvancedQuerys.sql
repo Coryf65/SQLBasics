@@ -100,6 +100,14 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 
 -- INTERSECT
 
+	-- Only Returns the Rows that Exist in Both tables!
+	-- cannot match on ID's because they will not match
+
+	SELECT MakeName FROM Make
+	INTERSECT
+	SELECT MakeName FROM ForeignMake
+	ORDER BY MakeName;
+	
 
 
 
