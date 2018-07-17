@@ -130,3 +130,31 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 	SELECT MakeName FROM Make
 	
 	ORDER BY MakeName;
+
+
+-- Sub Queries!!
+	
+	--Subqueries are one of the most advanced concepts to learn in SQL query writing. Seeing lots of examples and getting lots of practice will help solidify the concept.
+
+	-- Reasons why we might use a subQuery
+
+	-- Criteria for a Where clause is not specifically known
+	-- You need a temporary dataset to join with other tables in your Database
+	
+
+-- IN Keyword
+
+	-- a normal query using the IN keyword
+
+	-- SELECT <columns> FROM <table 1> WHERE <column 1> IN (SELECT <column 1>	FROM <table 2>	WHERE <search_criteria>);
+	SELECT * FROM Sale WHERE CarID IN (1, 3, 5);
+
+	-- now using a subquery
+	--All Sales with the 2015 Model Car
+
+		SELECT * FROM Sale WHERE CarID IN (SELECT CarID FROM Car WHERE ModelYear = '2015');
+
+	-- Or all Cars Sales NOT from 2015
+
+		SELECT * FROM Sale WHERE CarID NOT IN (SELECT CarID FROM Car WHERE ModelYear = '2015');
+	
