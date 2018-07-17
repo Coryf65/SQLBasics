@@ -61,3 +61,51 @@ SELECT md.ModelName, c.VIN FROM Model AS md
 SELECT s.SaleDate, s.SaleAmount, sr.FirstName, sr.LastName FROM Sale AS s
 
 LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
+
+
+--SET Operations 
+
+-- UNOIN 
+
+	-- Example of Union (Returns a distinct list of results, gets rid of duplicates)
+	-- The Number of columns must be the same for UNOINS !
+	-- What are all of the domestic and Foriegn Makes?
+
+	SELECT MakeName FROM Make
+	UNION
+	SELECT MakeName FROM ForeignMake;
+	-- CAN Add a WHERE Clause like only Makes with letters that start before D
+
+	SELECT MakeID, MakeName FROM Make
+	WHERE MakeName < 'D'
+
+	UNION
+
+	SELECT ForeignMakeID, MakeName FROM ForeignMake
+	WHERE MakeName < 'D'
+
+	ORDER BY MakeName;
+
+-- UNOIN ALL
+
+	-- Example of Union ALL (Returns a list of results, Does NOT get rid of duplicates)
+
+	SELECT MakeName FROM Make
+	UNION ALL
+	SELECT MakeName FROM ForeignMake
+	
+	ORDER BY MakeName;
+
+
+
+-- INTERSECT
+
+
+
+
+
+
+
+-- EXCEPT
+
+
