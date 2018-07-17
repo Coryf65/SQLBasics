@@ -74,6 +74,8 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 	SELECT MakeName FROM Make
 	UNION
 	SELECT MakeName FROM ForeignMake;
+	
+	
 	-- CAN Add a WHERE Clause like only Makes with letters that start before D
 
 	SELECT MakeID, MakeName FROM Make
