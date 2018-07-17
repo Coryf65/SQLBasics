@@ -109,11 +109,22 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 	ORDER BY MakeName;
 	
 
-
-
-
-
-
 -- EXCEPT
 
+	-- returns all rows EXCEPT for the rows that match in the second query
 
+	-- What makes are Domestic Only
+
+	SELECT MakeName FROM Make
+	EXCEPT
+	SELECT MakeName FROM ForeignMake
+	
+	ORDER BY MakeName;
+
+	-- What are foreign only Makes?
+
+	SELECT MakeName FROM ForeignMake
+	EXCEPT
+	SELECT MakeName FROM Make
+	
+	ORDER BY MakeName;
