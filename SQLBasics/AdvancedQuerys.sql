@@ -157,4 +157,20 @@ LEFT OUTER JOIN SalesRep AS sr ON s.SalesRepID = sr.SalesRepID
 	-- Or all Cars Sales NOT from 2015
 
 		SELECT * FROM Sale WHERE CarID NOT IN (SELECT CarID FROM Car WHERE ModelYear = '2015');
-	
+
+-- Using a TEMP table Also called a Derived Table
+
+	-- SELECT <columns> FROM <table 1> WHERE <column 1> <INNER|OUTER> JOIN 
+	--      (SELECT <column 1>	FROM <table 2>	WHERE <search_criteria>) AS <temporary name> ON <equality criteria>;
+
+		SELECT * FROM Sale AS s
+		INNER JOIN (SELECT CarID FROM Car WHERE ModelYear = '2015') AS temp
+		ON s.CarID = temp.CarID;
+
+		-- We can add any Columns we would like
+
+		-- adding another column
+
+		SELECT * FROM Sale AS s
+		INNER JOIN (SELECT CarID, ModelYear FROM Car WHERE ModelYear = '2015') AS temp
+		ON s.CarID = temp.CarID;
